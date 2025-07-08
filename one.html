@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
-<body>
-    <div ng-app="">
-    <p>Name: <input type="text" ng-model="name"></p>
-    <p ng-bind="name"></p>
+<body class="bg-dark text-danger">
+    <div data-ng-app="" data-ng-init="firstName='Abi';secondName='Jose C';myCol='white'">
+    <p>Name: <input type="text" data-ng-model="name"></p>
+    <p data-ng-bind="name"></p>
+    <p>The name is <span data-ng-bind="firstName"></span></p>
+    <p>The second name is <span data-ng-bind="secondName"></span></p>
+    <p>My first expression: {{ 5 + 5 }}</p>
+    <input style="background-color:{{myCol}}" ng-model="myCol">
     </div>
 </body>
 </html>
